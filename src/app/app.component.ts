@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { ColorService } from './color.service'
 
 @Component({
   selector: 'app-root',
@@ -25,9 +26,8 @@ export class AppComponent {
       color: 'bg-teal-500'
     },
   ]
-  selected_option = this.options[0]
-
-  bereken() {
-    console.log(this.selected_option)
+  
+  constructor(private colorService: ColorService){
+    this.colorService.setKleur(this.options[0])
   }
 }
