@@ -1,5 +1,7 @@
 <div class="w-full h-screen pt-12 bg-gray-100">
-  <app-color-list [options]="options" ></app-color-list>
-  <app-color-square></app-color-square>
+  <div class="flex gap-0">
+    <app-color-list class="flex-grow" [options]="options"></app-color-list>
+    <app-color-square class="flex-grow"></app-color-square>
+  </div>
   <app-color-form></app-color-form>
 </div>
