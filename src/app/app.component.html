@@ -1,0 +1,20 @@
+<div class="w-full h-screen bg-gray-100">
+  <div class="bg-white pt-2 w-3/5 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+    <h1 class="text-4xl mx-auto"> kies kleur </h1>
+    <div class="-mx-3 md:flex mb-2">
+      <div class="md:w-1/2 px-3">
+        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+          Kleur
+        </label>
+        <div>
+          <select [(ngModel)]="selected_option"
+            class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded">
+            <option *ngFor="let o of options" [ngValue]="o"> {{ o.name }} </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="selected_option.color" class="w-3/5 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 my-2">
+    </div>
+  </div>
+</div>
