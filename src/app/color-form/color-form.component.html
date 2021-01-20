@@ -1,0 +1,41 @@
+<div class="bg-white pt-12 w-3/5 mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+  <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="color_name">
+      Kleur
+    </label>
+    <input [(ngModel)]="color_name"
+      class="appearance-none block w-full  bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+      id="color_name" type="string">
+  </div>
+  <div class="-mx-3 flex mb-6">
+    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="color-r">
+        R
+      </label>
+      <input [(ngModel)]="color_r"
+        class="appearance-none block w-full  bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+        id="color-r" min="0" max="255" type="number">
+    </div>
+    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="color-g">
+        G
+      </label>
+      <input [(ngModel)]="color_g"
+        class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+        id="color-g" min="0" max="255" type="number">
+    </div>
+    <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="color-b">
+        B
+      </label>
+      <input [(ngModel)]="color_b"
+        class="appearance-none block w-full  bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+        id="color-b" min="0" max="255" type="number">
+    </div>
+
+  </div>
+  <div class="text-center">
+    <button (click)="saveKleur()" [disabled]="!color_name.length"
+      class="h-12 px-6 m-2 text-lg text-white transition-colors duration-150 bg-teal-400 rounded-lg focus:shadow-outline hover:bg-teal-500">
+      Save!</button>
+  </div>

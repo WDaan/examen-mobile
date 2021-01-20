@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { ColorListComponent } from './color-list/color-list.component';
-import { ColorSquareComponent } from './color-square/color-square.component'
+import { ColorSquareComponent } from './color-square/color-square.component';
+import { ColorFormComponent } from './color-form/color-form.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorListComponent,
-    ColorSquareComponent
+    ColorSquareComponent,
+    ColorFormComponent
   ],
   imports: [
     BrowserModule,

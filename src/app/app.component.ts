@@ -8,26 +8,11 @@ import { ColorService } from './color.service'
 })
 export class AppComponent {
   title = 'angular'
-  options = [
-    {
-      name: 'red',
-      color: 'bg-red-500'
-    },
-    {
-      name: 'green',
-      color: 'bg-green-500'
-    },
-    {
-      name: 'blue',
-      color: 'bg-blue-600'
-    },
-    {
-      name: 'teal',
-      color: 'bg-teal-500'
-    },
-  ]
-  
-  constructor(private colorService: ColorService){
-    this.colorService.setKleur(this.options[0])
+  options = []
+
+  constructor(private colorService: ColorService) {
+    this.colorService.getOpties().subscribe((newOptions: any) => {
+      this.options = newOptions
+    })
   }
 }
